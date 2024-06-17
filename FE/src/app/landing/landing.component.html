@@ -1,0 +1,49 @@
+<app-top-bar></app-top-bar>
+<div class="landing-container">
+    <form (ngSubmit)="onSubmit()">
+        <form [formGroup]="townForm">
+            <mat-form-field>
+                <mat-label>From:</mat-label>
+                <input type="text"
+                       matInput
+                       formControlName="townGroup"
+                       required
+                       [matAutocomplete]="autoGroup">
+                <mat-autocomplete #autoGroup="matAutocomplete">
+                    <ng-container *ngFor="let group of townGroupOptions | async">
+                        <mat-optgroup [label]="group.letter">
+                            <mat-option *ngFor="let town of group.towns" [value]="town">{{ town }}</mat-option>
+                        </mat-optgroup>
+                    </ng-container>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+        <form [formGroup]="townForm">
+            <mat-form-field>
+                <mat-label>To:</mat-label>
+                <input type="text"
+                       matInput
+                       formControlName="townGroup"
+                       required
+                       [matAutocomplete]="autoGroup">
+                <mat-autocomplete #autoGroup="matAutocomplete">
+                    <ng-container *ngFor="let group of townGroupOptions | async">
+                        <mat-optgroup [label]="group.letter">
+                            <mat-option *ngFor="let town of group.towns" [value]="town">{{ town }}</mat-option>
+                        </mat-optgroup>
+                    </ng-container>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+
+        <div class="form-group">
+            <label for="departureDate">Departure date:</label>
+            <input type="date" class="form-control" id="departureDate" name="departureDate" [(ngModel)]="departureDate" required>
+        </div>
+        <div class="form-group">
+            <label for="numberOfPeople">Number of people:</label>
+            <input type="number" class="form-control" id="numberOfPeople" name="numberOfPeople" min="1" [(ngModel)]="numberOfPeople" required>
+        </div>
+        <a routerLink="/search"><button>Search</button></a>
+    </form>
+</div>

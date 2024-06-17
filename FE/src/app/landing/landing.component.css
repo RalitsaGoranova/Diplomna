@@ -1,0 +1,32 @@
+.landing-container {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.form-group,
+mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-group label,
+mat-form-field mat-label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"],
+input[matInput] {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}

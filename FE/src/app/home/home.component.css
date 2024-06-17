@@ -1,0 +1,38 @@
+.homepage-container {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.homepage-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.homepage-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    background-image: linear-gradient(to right, #9743e5, #db7ee8);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+

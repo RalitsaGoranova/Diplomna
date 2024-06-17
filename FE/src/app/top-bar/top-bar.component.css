@@ -1,0 +1,19 @@
+/* styles.css or top-bar.component.css */
+.example-fill-remaining-space {
+    flex: 1 1 auto; /* This fills the remaining space using flexbox */
+}
+img {
+    width: 40%; /* Set the width to 100% of its container */
+    max-width: 70px; /* Limit the maximum width if needed */
+    height: 65px; /* Maintain aspect ratio */
+}
+.custom-toolbar {
+    background-color: #8e2de2;
+}
+a {
+    color: #db7ee8;
+}
+.link-container {
+    display: flex;
+    gap: 20px; /* Controls the space between the links */
+}

@@ -1,0 +1,41 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.account-area {
+  background-color: white;
+  padding: 40px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.input-group label {
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #9743e5, #db7ee8);
+}
+a.registration-link {
+  color: #9743e5;
+  text-align: center;
+  display: block;
+}
