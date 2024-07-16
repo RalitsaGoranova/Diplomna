@@ -1,18 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { map, Observable, startWith } from "rxjs";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { RouterLink } from "@angular/router";
 import {TopBarComponent} from "../top-bar/top-bar.component";
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {CommonModule} from "@angular/common";
-import {
-  MatAutocomplete,
-  MatAutocompleteModule,
-  MatAutocompleteTrigger,
-  MatOptgroup,
-  MatOption
-} from "@angular/material/autocomplete";
-import {map, Observable, startWith} from "rxjs";
-import {MatFormField, MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {RouterLink} from "@angular/router";
 
 export class TownGroup {
   letter: string;
@@ -23,13 +17,12 @@ export class TownGroup {
     this.towns = towns;
   }
 }
+
 // Define the filter function
 export const _filter = (opt: string[], value: string): string[] => {
   const filterValue = value.toLowerCase(); // Convert input value to lowercase
   return opt.filter(item => item.toLowerCase().includes(filterValue)); // Filter options to include only those that contain the filterValue
 };
-
-
 
 @Component({
   selector: 'app-landing',
@@ -41,17 +34,13 @@ export const _filter = (opt: string[], value: string): string[] => {
     MatInputModule,
     MatAutocompleteModule,
     CommonModule,
-    TopBarComponent,
-    RouterLink
+    RouterLink,
+    TopBarComponent
   ],
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
-export class LandingComponent {
-  from: string = '';
-  destination: string = '';
-  departureDate: Date | null = null;
-  numberOfPeople: number = 1;
+export class LandingComponent implements OnInit {
   townForm!: FormGroup;
   townGroups: TownGroup[] = [
     {
@@ -128,17 +117,25 @@ export class LandingComponent {
     },
   ];
 
-
-  townGroupOptions!: Observable<TownGroup[]>;
+  townGroupOptionsFrom!: Observable<TownGroup[]>;
+  townGroupOptionsTo!: Observable<TownGroup[]>;
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.townForm = this.formBuilder.group({
-      townGroup: ''
+      from: '',
+      destination: '',
+      departureDate: null,
+      numberOfPeople: 1
     });
 
-    this.townGroupOptions = this.townForm.get('townGroup')!.valueChanges.pipe(
+    this.townGroupOptionsFrom = this.townForm.get('from')!.valueChanges.pipe(
+        startWith(''),
+        map(value => this._filterGroup(value))
+    );
+
+    this.townGroupOptionsTo = this.townForm.get('destination')!.valueChanges.pipe(
         startWith(''),
         map(value => this._filterGroup(value))
     );
@@ -155,6 +152,13 @@ export class LandingComponent {
   }
 
   onSubmit() {
-
+    const from = this.townForm.get('from')!.value;
+    const destination = this.townForm.get('destination')!.value;
+    const departureDate = this.townForm.get('departureDate')!.value;
+    const numberOfPeople = this.townForm.get('numberOfPeople')!.value;
+    console.log('From:', from);
+    console.log('To:', destination);
+    console.log('Departure Date:', departureDate);
+    console.log('Number of People:', numberOfPeople);
   }
 }

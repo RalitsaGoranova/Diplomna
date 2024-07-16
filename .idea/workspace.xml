@@ -5,191 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f36d3fa-cb37-425e-9bea-c12417532d75" name="Changes" comment="neshto si">
-      <change afterPath="$PROJECT_DIR$/.idea/Diplomna.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/EmailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/PasswordEncoderBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/TravelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/enums/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/enums/email/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/enums/status/OfferStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/Travel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/TravelOffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/EmailRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/TravelDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/TravelOfferDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/repos/TravelOfferRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/repos/TravelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/repos/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/TravelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BE/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/fe/.tsbuildinfo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_common.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_common_http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_common_http.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_core.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_forms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_forms.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_autocomplete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_autocomplete.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_core.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_form-field.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_form-field.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_input.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_snack-bar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_snack-bar.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_toolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_toolbar.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser_animations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser_animations.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_router.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/_metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-2572PXDU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-2572PXDU.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-5CZMZ5WG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-5CZMZ5WG.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-ESU3UWXV.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-ESU3UWXV.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-FCT5AU64.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-FCT5AU64.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-JURAU4P4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-JURAU4P4.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-KWS6EVCK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-KWS6EVCK.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-MT6I7CWK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-MT6I7CWK.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-SXIXOCJ4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-SXIXOCJ4.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-VWTQYRNW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-VWTQYRNW.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-WGUSVH24.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-WGUSVH24.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/rxjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/rxjs.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.vscode/extensions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.vscode/launch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/.vscode/tasks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/3rdpartylicenses.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/assets/car.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/assets/logo.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/landing/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/login/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/main-3SBSELEQ.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/polyfills-A7MJM4D4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/registration/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/search/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/browser/styles-RSAQMOR5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/prerendered-routes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/chunk-22QPOF2O.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/chunk-LNIWXXLT.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/chunk-M3RGKDH7.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/chunk-NBHRSQBT.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/chunk-O73ZHKXN.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/chunk-VVCT4QZE.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/index.server.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/main.server.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/polyfills.server.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/render-utils.server.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/dist/fe/server/server.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/app.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/app.config.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/app.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/app.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/home/home.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/home/home.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/home/home.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/home/home.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/login.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/login.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/login/login.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/login/login.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/login/login.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/login/login.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/registration/registration.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/registration/registration.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/registration/registration.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/registration/registration.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/search/search.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/search/search.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/search/search.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/search/search.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/assets/car.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/assets/logo.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/dto/auth.dto.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/enviroments/enviroments.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/guard/auth.interceptor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/main.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/services/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/AuthRequestLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FE/src/dto/travel.dto.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/fe/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/fe/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/app/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/app/landing/landing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/dto/auth.dto.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/dto/auth.dto.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -204,6 +44,12 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/FE/package.json" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -213,28 +59,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.DemoApplication.executor": "Run",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ralitsa/Diplomna",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "C:\\Program Files (x86)\\JetBrains\\IntelliJ IDEA 2024.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ralitsa/Diplomna&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ralitsa\\Diplomna\\FE\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ralitsa\Diplomna\FE\src" />
@@ -280,8 +126,20 @@
       <workItem from="1717625633059" duration="9578000" />
       <workItem from="1718393166527" duration="20391000" />
       <workItem from="1718583132697" duration="4389000" />
-      <workItem from="1718627124040" duration="3519000" />
+      <workItem from="1718627124040" duration="10212000" />
+      <workItem from="1718835133607" duration="2557000" />
+      <workItem from="1720698908643" duration="2621000" />
+      <workItem from="1721048730022" duration="12066000" />
     </task>
+    <task id="LOCAL-00001" summary="neshto si">
+      <option name="closed" value="true" />
+      <created>1718632016665</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718632016665</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

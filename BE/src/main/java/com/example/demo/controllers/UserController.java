@@ -2,12 +2,14 @@ package com.example.demo.controllers;
 
 import com.example.demo.models.User;
 import com.example.demo.models.dtos.AuthRequest;
+import com.example.demo.models.dtos.AuthRequestLogin;
 import com.example.demo.models.dtos.UserDTO;
 import com.example.demo.services.AuthenticationService;
 import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataRetrievalFailureException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
@@ -41,9 +43,14 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String authenticate(@RequestBody AuthRequest authRequest) {
-        return authService.authenticate(authRequest);
+    public ResponseEntity<String> authenticate(@RequestBody AuthRequestLogin authRequest) {
+        String token = authService.authenticate(authRequest);
+        return ResponseEntity.ok().contentType(MediaType.TEXT_PLAIN).body(token);
     }
+//    @PostMapping("/login")
+//    public String authenticate(@RequestBody AuthRequestLogin authRequest) {
+//        return authService.authenticate(authRequest);
+//    }
 
     @GetMapping
     @Secured({"ADMIN"})

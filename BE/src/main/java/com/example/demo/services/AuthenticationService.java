@@ -1,9 +1,9 @@
 package com.example.demo.services;
 
 import com.example.demo.config.JwtUtils;
-import com.example.demo.models.dtos.AuthRequest;
 import com.example.demo.models.User;
 import com.example.demo.models.UserData;
+import com.example.demo.models.dtos.AuthRequestLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -36,13 +36,20 @@ public class AuthenticationService implements UserDetailsService {
         return user == null ? null : new UserData(user);
     }
 
-    public String authenticate(AuthRequest authRequest) {
-        Authentication authentication = authenticationManager
-                .authenticate(new UsernamePasswordAuthenticationToken(
-                        authRequest.getUsername(), authRequest.getPassword()));
-        if (authentication.isAuthenticated()) {
-            return jwtUtils.generateToken(authRequest.getUsername());
+    public String authenticate(AuthRequestLogin authRequest) {
+        try {
+            Authentication authentication = authenticationManager
+                    .authenticate(new UsernamePasswordAuthenticationToken(
+                            authRequest.getUsername(), authRequest.getPassword()));
+            System.out.println(authRequest.getUsername() +" / "+ authRequest.getPassword());
+            if (authentication.isAuthenticated()) {
+                return jwtUtils.generateToken(authRequest.getUsername());
+            }
+        } catch (Exception e) {
+            // Log the exception for debugging
+            System.out.println("Authentication failed: " + e.getMessage());
         }
         throw new UsernameNotFoundException("Invalid username or password!");
     }
+
 }
