@@ -5,19 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f36d3fa-cb37-425e-9bea-c12417532d75" name="Changes" comment="neshto si">
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/AuthRequestLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/dto/travel.dto.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BE/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BE/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BE/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/fe/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/fe/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/landing/landing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/dto/auth.dto.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/dto/auth.dto.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/assets/car.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/assets/logo.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/landing/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/login/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/main-3SBSELEQ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/polyfills-A7MJM4D4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/registration/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/search/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/browser/styles-RSAQMOR5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/prerendered-routes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/chunk-22QPOF2O.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/chunk-LNIWXXLT.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/chunk-M3RGKDH7.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/chunk-NBHRSQBT.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/chunk-O73ZHKXN.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/chunk-VVCT4QZE.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/index.server.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/main.server.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/polyfills.server.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/render-utils.server.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/dist/fe/server/server.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/dto/travel.dto.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/dto/travel.dto.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/guard/auth.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/guard/auth.interceptor.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +152,9 @@
       <workItem from="1718835133607" duration="2557000" />
       <workItem from="1720698908643" duration="2621000" />
       <workItem from="1721048730022" duration="12066000" />
+      <workItem from="1721400928049" duration="3979000" />
+      <workItem from="1721819237597" duration="28104000" />
+      <workItem from="1723074199695" duration="1238000" />
     </task>
     <task id="LOCAL-00001" summary="neshto si">
       <option name="closed" value="true" />
@@ -159,6 +184,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="neshto si" />
     <option name="LAST_COMMIT_MESSAGE" value="neshto si" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/FE/src/services/auth.service.ts</url>
+          <line>23</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
