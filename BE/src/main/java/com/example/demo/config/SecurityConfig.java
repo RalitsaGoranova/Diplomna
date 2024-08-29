@@ -36,6 +36,8 @@ public class SecurityConfig {
                 .cors(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(registry -> registry.requestMatchers("/api/users/register").permitAll())
                 .authorizeHttpRequests(registry -> registry.requestMatchers("/api/users/login").permitAll())
+                .authorizeHttpRequests(registry -> registry.requestMatchers("/api/travel/submit").permitAll())
+                .authorizeHttpRequests(registry -> registry.requestMatchers("/api/users/logout").permitAll())
                 .authorizeHttpRequests(registry -> registry.anyRequest().permitAll())
                 .build();
     }

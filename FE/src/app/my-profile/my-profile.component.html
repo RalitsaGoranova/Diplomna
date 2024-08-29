@@ -1,0 +1,56 @@
+<app-top-bar></app-top-bar>
+
+<div class="myprofile-container">
+    <div class="profile-info">
+        <h2>My Profile</h2>
+        <p><strong>Email:</strong> {{ userProfile?.email || 'Loading...' }}</p>
+        <p><strong>Phone number:</strong> {{ userProfile?.phoneNumber || 'Loading...' }}</p>
+        <p><strong>Username:</strong> {{ userProfile?.username || 'Loading...' }}</p>
+    </div>
+
+    <div class="travels-section">
+        <div class="travels-created">
+            <h3>Created travels by me</h3>
+            <div *ngIf="travelsCreatedByMe.length > 0; else noCreatedTravels">
+                <div *ngFor="let travel of travelsCreatedByMe" class="travel-item">
+                    <p><strong>Start Location:</strong> {{ travel.startLocation }}</p>
+                    <p><strong>End Location:</strong> {{ travel.endLocation }}</p>
+                    <p><strong>Description:</strong> {{ travel.description }}</p>
+                    <p><strong>Start Time:</strong> {{ travel.startTime | date:'short' }}</p>
+                    <p><strong>Free Spaces:</strong> {{ travel.freeSpaces }}</p>
+                    <div *ngIf="travel.id && offersByTravelId && offersByTravelId[travel.id].length > 0"
+                         class="inner-offers">
+                        <h4>Offers:</h4>
+                        <div>
+                            <div *ngFor="let offer of offersByTravelId[travel.id]" style="background-color: #b1b3d6">
+                                <p><strong>Offer Note:</strong> {{ offer.note }}</p>
+                                <button mat-stroked-button (click)="acceptOffer(travel.id!, offer.id!)">Accept</button>
+                                <button mat-stroked-button (click)="declineOffer(travel.id!, offer.id!)">Decline
+                                </button>
+                                <hr/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #noCreatedTravels>
+                <p>No travels created by you.</p>
+            </ng-template>
+        </div>
+
+        <div class="travels-passenger">
+            <h3>Travels where I am a passenger</h3>
+            <div *ngFor="let offer of travelsAsPassenger">
+                <p><strong>Start Location:</strong> {{ offer.startLocation }}</p>
+                <p><strong>End Location:</strong> {{ offer.endLocation }}</p>
+                <p><strong>Start Time:</strong> {{ offer.startTime | date:'short' }}</p>
+                <p><strong>Offer Note:</strong> {{ offer.note }}</p>
+                <p><strong>Status:</strong> {{ offer.status }}</p>
+                <hr/>
+            </div>
+            <ng-template #noPassengerTravels>
+                <p>No travels where you are a passenger.</p>
+            </ng-template>
+        </div>
+    </div>
+</div>

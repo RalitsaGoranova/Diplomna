@@ -19,8 +19,8 @@
             </div>
             <div class="input-group">
                 <label for="phone_number">Phone Number</label>
-                <input type="tel" id="phone_number" name="phone_number" [(ngModel)]="user.phone_number" placeholder="Enter Your Phone Number" required>
-                <div *ngIf="registrationForm.submitted && !user.phone_number" class="error-message">Phone number is required.</div>
+                <input type="tel" id="phone_number" name="phone_number" [(ngModel)]="user.phoneNumber" placeholder="Enter Your Phone Number" required>
+                <div *ngIf="registrationForm.submitted && !user.phoneNumber" class="error-message">Phone number is required.</div>
             </div>
             <button type="submit" [disabled]="registrationForm.form.invalid">REGISTER</button>
         </form>

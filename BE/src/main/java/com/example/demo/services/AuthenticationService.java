@@ -52,4 +52,7 @@ public class AuthenticationService implements UserDetailsService {
         throw new UsernameNotFoundException("Invalid username or password!");
     }
 
+    public void invalidateToken(String jwtToken) {
+
+    }
 }

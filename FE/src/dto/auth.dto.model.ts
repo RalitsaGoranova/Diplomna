@@ -7,6 +7,6 @@ export interface AuthRequest {
 export interface AuthRequestReg {
     username: string;
     email: string;
-    phone_number: string;
+    phoneNumber: string;
     password: string;
 }

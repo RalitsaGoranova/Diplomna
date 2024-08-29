@@ -1,11 +1,14 @@
 <!-- top-bar.c"omponent.html -->
 <mat-toolbar class="custom-toolbar">
-    <img src="assets/logo.jfif" alt="Logo">
+    <a routerLink="/landing">
+        <img src="assets/logo.jfif" alt="Logo">
+    </a>
     <span class="example-fill-remaining-space"></span>
     <div class="link-container">
-        <a routerLink="/landing" class="landing-link">Search</a>
+        <a routerLink="/search" class="search-link">Search</a>
         <a routerLink="/create" class="create-link">Create a new travel ad</a>
         <a routerLink="/aboutus" class="aboutus-link">About Us</a>
         <a routerLink="/profile" class="profile-link">My Profile</a>
+        <a (click)="logout()" routerLink="/login" class="logout-link">Log out</a>
     </div>
 </mat-toolbar>

@@ -6,6 +6,7 @@ import com.example.demo.models.TravelOffer;
 import com.example.demo.models.User;
 import com.example.demo.models.dtos.EmailRequest;
 import com.example.demo.models.dtos.TravelDTO;
+import com.example.demo.models.dtos.TravelDTOPassengers;
 import com.example.demo.models.dtos.TravelOfferDTO;
 import com.example.demo.services.EmailService;
 import com.example.demo.services.TravelService;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/travel")
 public class TravelController {
@@ -38,7 +40,7 @@ public class TravelController {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping("/getAll")
     @Secured({})
     public ResponseEntity<List<TravelDTO>> getAll() {
         return new ResponseEntity<>(travelService.getAll(), HttpStatus.OK);
@@ -46,38 +48,56 @@ public class TravelController {
 
     @GetMapping("/{id}")
     @Secured({})
-    public ResponseEntity<List<TravelOfferDTO>> getOffers(@PathVariable Long travelId,
+    public ResponseEntity<List<TravelOfferDTO>> getOffers(@PathVariable Long id,
                                                           @AuthenticationPrincipal UserDetails userDetails) {
-        return new ResponseEntity<>(travelService.getOffers(travelId, userDetails), HttpStatus.OK);
+        return new ResponseEntity<>(travelService.getOffers(id, userDetails), HttpStatus.OK);
     }
 
-    @PostMapping
+    @GetMapping("/getUser")
+    @Secured({})
+    public ResponseEntity<String> getUser(@AuthenticationPrincipal UserDetails userDetails) {
+        return new ResponseEntity<>(userDetails.getUsername(), HttpStatus.OK);
+    }
+
+    @PostMapping("/submit")
     @Secured({})
     public ResponseEntity<String> submitTravel(@RequestBody TravelDTO travel,
                                                @AuthenticationPrincipal UserDetails userDetails) {
+        System.out.println(travel);
         travelService.saveTravel(travel, userDetails);
         return new ResponseEntity<>("Travel created", HttpStatus.CREATED);
     }
+
+
 
     @PostMapping("/offer/{travelId}")
     @Secured({})
     public ResponseEntity<String> addTravelOffer(@PathVariable Long travelId,
                                                  @RequestBody TravelOfferDTO travelOffer,
                                                  @AuthenticationPrincipal UserDetails userDetails) {
+        System.out.println(travelId);
+        System.out.println(travelOffer);
+        System.out.println(userDetails);
         return travelService.addOffer(travelId, travelOffer, userDetails);
     }
-
-    @GetMapping("/offer/{travelId}/accept")
+    @GetMapping("/{travelId}/offer/{offerId}/accept")
     @Secured({})
     public ResponseEntity<String> acceptRequest(@PathVariable Long travelId,
+                                                @PathVariable Long offerId,
                                                 @AuthenticationPrincipal UserDetails userDetails) {
-        TravelOffer offer = travelService.getOffer(travelId);
+        TravelOffer offer = travelService.getOffer(offerId);
+        System.out.println("tova1" + offer);
+
         if (offer == null) {
-            return new ResponseEntity<>("Travel not found", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Offer not found", HttpStatus.NOT_FOUND);
         }
 
         if (offer.getStatus() != OfferStatus.SUBMITTED) {
             return new ResponseEntity<>("Offer already completed", HttpStatus.NOT_FOUND);
+        }
+
+        if (!offer.getTravel().getId().equals(travelId)) {
+            return new ResponseEntity<>("Offer does not belong to this travel", HttpStatus.NOT_FOUND);
         }
 
         User user = userService.getByUsername(userDetails.getUsername());
@@ -86,12 +106,13 @@ public class TravelController {
         }
 
         EmailRequest request = new EmailRequest(offer.getUser().getEmail(), Subject.OFFER_ACCEPTED,
-                String.format("Your offer for the travel %s - %s (%s) has been accepted! Please call % on %s!",
+                String.format("Your offer for the travel %s - %s (%s) has been accepted! Please call %s on %s or write mail on %s!",
                         offer.getTravel().getStartLocation(),
                         offer.getTravel().getEndLocation(),
                         offer.getTravel().getStartTime().format(CUSTOM_FORMATTER),
                         offer.getTravel().getUser().getUsername(),
-                        offer.getTravel().getUser().getPhoneNumber()));
+                        offer.getTravel().getUser().getPhoneNumber(),
+                        offer.getTravel().getUser().getEmail()));
         this.emailService.sendEmail(request);
 
         offer.setStatus(OfferStatus.ACCEPTED);
@@ -101,12 +122,12 @@ public class TravelController {
         return new ResponseEntity<>("Travel request accepted successfully", HttpStatus.OK);
     }
 
-    @GetMapping("/offer/{travelId}/decline")
+    @GetMapping("/{travelId}/offer/{offerId}/decline")
     @Secured({})
     public ResponseEntity<String> declineRequest(@PathVariable Long travelId,
+                                                 @PathVariable Long offerId,
                                                  @AuthenticationPrincipal UserDetails userDetails) {
-
-        TravelOffer offer = travelService.getOffer(travelId);
+        TravelOffer offer = travelService.getOffer(offerId);
         if (offer == null) {
             return new ResponseEntity<>("Travel not found", HttpStatus.NOT_FOUND);
         }
@@ -127,11 +148,39 @@ public class TravelController {
                         offer.getTravel().getStartTime().format(CUSTOM_FORMATTER),
                         offer.getTravel().getUser().getUsername()));
         this.emailService.sendEmail(request);
-
+        offer.getTravel().setFreeSpaces(offer.getTravel().getFreeSpaces() + 1);
         offer.setStatus(OfferStatus.DENIED);
 
         this.travelService.saveOffer(offer);
 
         return new ResponseEntity<>("Travel request denied successfully", HttpStatus.OK);
+    }
+    @GetMapping("/createdbyme/{username}")
+    public List<TravelDTO> getTravelsByUsername(@PathVariable String username) {
+        Long creatorId = userService.getByUsername(username).getId();
+        if (creatorId != null) {
+            return travelService.getTravelsByCreatorId(creatorId);
+        } else {
+            // Return an empty list or handle the case where the user does not exist
+            return List.of();
+        }
+    }
+
+
+    @GetMapping("/travelsPassenger")
+    @Secured({})
+    public ResponseEntity<List<TravelDTOPassengers>> getTravelsAsPassenger(@AuthenticationPrincipal UserDetails userDetails) {
+        return new ResponseEntity<>(travelService.getOffersPassenger(userDetails), HttpStatus.OK);
+    }
+
+    @GetMapping("/{travelId}/offers/user")
+    public ResponseEntity<Boolean> hasUserSubmittedOffer(@PathVariable Long travelId,
+     @AuthenticationPrincipal UserDetails userDetails) {
+        String username = userDetails.getUsername();
+        Long userId = userService.getByUsername(username).getId();
+        System.out.println(travelId);
+        System.out.println(userId);
+        boolean hasSubmitted = travelService.hasUserSubmittedOffer(travelId, userId);
+        return ResponseEntity.ok(hasSubmitted);
     }
 }

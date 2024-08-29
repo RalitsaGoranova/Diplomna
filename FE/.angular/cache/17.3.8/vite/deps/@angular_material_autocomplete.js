@@ -5,11 +5,11 @@ import {
   OverlayModule,
   TemplatePortal,
   ViewportRuler
-} from "./chunk-ESU3UWXV.js";
+} from "./chunk-FXBEFZUZ.js";
 import {
   MAT_FORM_FIELD,
   MatFormField
-} from "./chunk-KWS6EVCK.js";
+} from "./chunk-3LH7WDCX.js";
 import {
   animate,
   group,
@@ -17,10 +17,10 @@ import {
   style,
   transition,
   trigger
-} from "./chunk-JURAU4P4.js";
+} from "./chunk-UOTJHIRN.js";
 import {
   NG_VALUE_ACCESSOR
-} from "./chunk-WGUSVH24.js";
+} from "./chunk-PF4YI7DZ.js";
 import {
   ActiveDescendantKeyManager,
   DOWN_ARROW,
@@ -43,11 +43,11 @@ import {
   addAriaReferencedId,
   hasModifierKey,
   removeAriaReferencedId
-} from "./chunk-VWTQYRNW.js";
+} from "./chunk-CQNEAXTD.js";
 import {
   CommonModule,
   DOCUMENT
-} from "./chunk-MT6I7CWK.js";
+} from "./chunk-552QMWYY.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -100,7 +100,7 @@ import {
   ɵɵrestoreView,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-FCT5AU64.js";
+} from "./chunk-ZRB72KMM.js";
 import {
   Subject,
   Subscription,
@@ -115,7 +115,8 @@ import {
   switchMap,
   take,
   tap
-} from "./chunk-SXIXOCJ4.js";
+} from "./chunk-WSA2QMXP.js";
+import "./chunk-J4B6MK7R.js";
 
 // node_modules/@angular/material/fesm2022/autocomplete.mjs
 var _c0 = ["panel"];

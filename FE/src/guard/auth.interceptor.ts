@@ -5,24 +5,30 @@ import {
     HttpRequest,
 } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { Injectable } from '@angular/core';
+import {Inject, Injectable, PLATFORM_ID} from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import {environment} from "../enviroments/enviroments";
+import {isPlatformBrowser} from "@angular/common";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-    constructor(private readonly authService: AuthService) {}
+    constructor(private readonly authService: AuthService,
+                @Inject(PLATFORM_ID) private platformId: Object) {}
 
     intercept(
         req: HttpRequest<any>,
         next: HttpHandler,
     ): Observable<HttpEvent<any>> {
-        const token = localStorage.getItem('token');
+        let headers = req.headers;
 
-        const headers = token
-            ? req.headers
-            : req.headers;
-        console.log("alo");
+        // Check if the code is running in the browser
+        if (isPlatformBrowser(this.platformId)) {
+            const token = localStorage.getItem('token');
+            if (token) {
+                headers = headers.set('Authorization', `Bearer ${token}`);
+            }
+        }
+
         const cloned = req.clone({
             url: `${environment.backendUrl}/${req.url}`,
             headers,

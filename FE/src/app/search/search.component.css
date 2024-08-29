@@ -1,9 +1,58 @@
 .search-container {
+        background: linear-gradient(to right, #8e2de2, #4a00e0);
+        display: flex;
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+    }
+.all{
+    height: 100vb;
     background: linear-gradient(to right, #8e2de2, #4a00e0);
+
+}
+
+.results {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.travel-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.travel-details {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group,
+mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-group label,
+mat-form-field mat-label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
 }

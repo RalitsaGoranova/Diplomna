@@ -3,7 +3,7 @@
     flex: 1 1 auto; /* This fills the remaining space using flexbox */
 }
 img {
-    width: 40%; /* Set the width to 100% of its container */
+    width: 100%; /* Set the width to 100% of its container */
     max-width: 70px; /* Limit the maximum width if needed */
     height: 65px; /* Maintain aspect ratio */
 }

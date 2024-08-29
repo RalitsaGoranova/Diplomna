@@ -1,0 +1,53 @@
+.myprofile-container {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    height: 100vb;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.travels-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.travels-created,
+.travels-passenger {
+    width: 48%;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2, h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.travel-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Adds a light grey line between items */
+}
+
+/* Optional: Remove the border from the last item */
+.travel-item:last-child {
+    border-bottom: none;
+}
+
+.inner-offers {
+    background-color: #f3f2f2;
+    border-radius: 8px;
+}

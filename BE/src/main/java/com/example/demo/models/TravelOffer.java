@@ -20,7 +20,8 @@ public class TravelOffer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "user_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(name = "note")
@@ -41,6 +42,7 @@ public class TravelOffer {
         this.note = travelOffer.getNote();
         this.travel = travel;
     }
+
 }
 
 

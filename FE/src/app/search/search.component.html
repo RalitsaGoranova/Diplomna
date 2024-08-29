@@ -1,3 +1,85 @@
 <app-top-bar></app-top-bar>
-<div class="search-container">
+<div class="all">
+    <div style="text-align: center">
+        <h1 style="font-weight: bold">Search for travel ad</h1>
+    </div>
+    <div class="search-container">
+        <form [formGroup]="townForm" (ngSubmit)="onSubmit()" class="search-form">
+            <div class="form-row">
+                <!-- From input field -->
+                <mat-form-field>
+                    <mat-label>From:</mat-label>
+                    <input type="text" matInput formControlName="from" required [matAutocomplete]="autoFrom">
+                    <mat-autocomplete #autoFrom="matAutocomplete">
+                        <ng-container *ngFor="let group of townGroupOptionsFrom | async">
+                            <mat-optgroup [label]="group.letter">
+                                <mat-option *ngFor="let town of group.towns" [value]="town">{{ town }}</mat-option>
+                            </mat-optgroup>
+                        </ng-container>
+                    </mat-autocomplete>
+                </mat-form-field>
+
+                <!-- To input field -->
+                <mat-form-field>
+                    <mat-label>To:</mat-label>
+                    <input type="text" matInput formControlName="destination" required [matAutocomplete]="autoTo">
+                    <mat-autocomplete #autoTo="matAutocomplete">
+                        <ng-container *ngFor="let group of townGroupOptionsTo | async">
+                            <mat-optgroup [label]="group.letter">
+                                <mat-option *ngFor="let town of group.towns" [value]="town">{{ town }}</mat-option>
+                            </mat-optgroup>
+                        </ng-container>
+                    </mat-autocomplete>
+                </mat-form-field>
+
+                <!-- Date input field -->
+                <div class="form-group">
+                    <label for="departureDate">Departure date:</label>
+                    <input type="date" class="form-control" id="departureDate" name="departureDate"
+                           formControlName="departureDate" required>
+                </div>
+
+                <!-- Time input field -->
+                <div class="form-group">
+                    <label for="departureTime">Departure time:</label>
+                    <input type="time" class="form-control" id="departureTime" name="departureTime"
+                           formControlName="departureTime" required>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="search-button">Search</button>
+            </div>
+        </form>
+
+        <!-- Conditionally display the filtered travels -->
+        <div *ngIf="searchTriggered">
+            <div *ngIf="sortedTravels.length > 0" class="results">
+                <h3>Available Travels:</h3>
+                <ul>
+                    <li *ngFor="let travel of sortedTravels" class="travel-card">
+                        <div *ngIf="travel.freeSpaces>0"class="travel-item">
+                            <div class="travel-details">
+                                <strong>{{ travel.startLocation }} to {{ travel.endLocation }}</strong><br>
+                                Date: {{ formatDate(travel.startTime) }}<br>
+                                Seats Available: {{ travel.freeSpaces }}<br>
+                                Description: {{ travel.description }}
+                            </div>
+                            <div *ngIf="travel.id !== undefined">
+                                <button
+                                        *ngIf="!hasSubmittedOffer(travel.id)"
+                                        mat-raised-button
+                                        color="primary"
+                                        (click)="openDialog(travel.id!)">
+                                    Choose
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div *ngIf="sortedTravels.length === 0">
+                <p>No travels match your criteria.</p>
+            </div>
+        </div>
+    </div>
 </div>

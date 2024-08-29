@@ -1,6 +1,7 @@
 package com.example.demo.models.dtos;
 
 import com.example.demo.models.Travel;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 public class TravelDTO {
     private Long id;
     private Long creatorId;
+    @JsonProperty("startLocation")
     private String startLocation;
     private String endLocation;
     private LocalDateTime startTime;

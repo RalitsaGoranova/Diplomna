@@ -1,20 +1,20 @@
-export class TravelDTO {
+export class TravelDTOByMe {
     id?: number;
-    creatorId?: number;
-    endLocation: string;
     startLocation:string;
-startTime: string;
-description: string;
-freeSpaces: number;
+    endLocation: string;
+    startTime: string;
+    description: string;
+    freeSpaces: number;
+    creatorId: number;
 
     constructor(data: any) {
         this.id=data.id;
-        this.creatorId = data.creatorId;
-        this.endLocation = data.endLocation;
         this.startLocation = data.startLocation;
+        this.endLocation = data.endLocation;
         this.startTime = data.startTime;
         this.freeSpaces = data.freeSpaces;
         this.description=data.description;
+        this.creatorId=data.creatorId;
         console.log('DTO constructed with data:', data);
     }
 }

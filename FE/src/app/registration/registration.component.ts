@@ -19,7 +19,7 @@ export class RegistrationComponent  {
     user = {
         email: '',
         username: '',
-        phone_number: '',
+        phoneNumber: '',
         password: ''
     };
 
@@ -31,7 +31,7 @@ export class RegistrationComponent  {
         const authRequestReg: AuthRequestReg = {
             email: this.user.email,
             username: this.user.username,
-            phone_number: this.user.phone_number,
+            phoneNumber: this.user.phoneNumber,
             password: this.user.password
         };
 
