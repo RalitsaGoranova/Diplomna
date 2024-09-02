@@ -1,4 +1,5 @@
 export class OfferPassengerDto {
+    id?: number;
     travelId: number;
     startLocation:string;
     endLocation: string;
@@ -7,6 +8,7 @@ export class OfferPassengerDto {
     note: string;
 
     constructor(data: any) {
+        this.id = data.id;
         this.travelId=data.travelId;
         this.startLocation=data.startLocation;
         this.endLocation=data.endLocation;

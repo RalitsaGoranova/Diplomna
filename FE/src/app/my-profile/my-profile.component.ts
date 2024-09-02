@@ -11,6 +11,8 @@ import {MatButton, MatFabButton} from "@angular/material/button";
 import {MatTooltip} from "@angular/material/tooltip";
 import {MatIcon} from "@angular/material/icon";
 import {OfferPassengerDto} from "../../dto/offerPassenger.dto.model";
+import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog-component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
     selector: 'app-my-profile',
@@ -24,7 +26,8 @@ export class MyProfileComponent implements OnInit {
   travelsCreatedByMe: TravelDTO[] = [];
   travelsAsPassenger: OfferPassengerDto[] = [];
   offersByTravelId: { [key: number]: OfferDTO[] } = {};
-  constructor(private userService: AuthService, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(private userService: AuthService,private dialog: MatDialog,
+              @Inject(PLATFORM_ID) private platformId: Object) {}
 
     ngOnInit(): void {
         if (isPlatformBrowser(this.platformId)) {
@@ -99,7 +102,7 @@ this.userService.getTravelsAsPassenger().subscribe(
         });
         setTimeout(() => {
             window.location.reload();
-        }, 5000);
+        }, 3000);
     }
 
     declineOffer(travelId: number, offerId: number): void {
@@ -111,6 +114,48 @@ this.userService.getTravelsAsPassenger().subscribe(
             },
             error: (err) => console.error(`Error declining offer ${offerId} for travel ${travelId}:`, err)
         });
-        window.location.reload();
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
+    }
+
+
+    deleteTravel(travelId: number): void {
+        const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+            width: '250px',
+            data: {message: 'Are you sure you want to delete this travel?'}
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            if (result) {
+                this.userService.deleteTravel(travelId).subscribe(() => {
+                    console.log(`Travel ${travelId} deleted`);
+                    this.loadTravels(this.userProfile.username);
+                });
+            }
+            setTimeout(() => {
+                window.location.reload();
+            }, 3000);
+        });
+
+    }
+
+    deleteOffer(offerId: number): void {
+        const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+            width: '250px',
+            data: {message: 'Are you sure you want to delete this offer?'}
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            if (result) {
+                this.userService.deleteOffer(offerId).subscribe(() => {
+                    console.log(`Offer ${offerId} deleted`);
+                    this.loadTravelsPassenger();
+                });
+            }
+            setTimeout(() => {
+                window.location.reload();
+            }, 3000);
+        });
     }
 }

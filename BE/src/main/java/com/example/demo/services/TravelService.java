@@ -75,7 +75,11 @@ public class TravelService {
         saveOffer(travelOffer);
         this.travelRepository.save(travel);
 
-        EmailRequest request = new EmailRequest(travelOffer.getTravel().getUser().getEmail(), Subject.OFFER_CREATED, travelOfferDto.getNote());
+        EmailRequest request = new EmailRequest(travelOffer.getTravel().getUser().getEmail(), Subject.OFFER_CREATED,
+                String.format("This is the note from the passenger: %s .You can email or call the passenger to tell you how much luggage they have , the exact location and what price you would offer them on the following details: %s / %s. Then approve or decline the offer by My profile.",
+                       travelOffer.getNote(),
+                        travelOffer.getUser().getEmail(),
+                        travelOffer.getUser().getPhoneNumber()));
         this.emailService.sendEmail(request);
 
         return new ResponseEntity<>("Travel request processed successfully", HttpStatus.OK);
@@ -115,13 +119,14 @@ public class TravelService {
         List<Travel> travels = travelRepository.findAll();
         List<TravelDTOPassengers> passengerOffers = new ArrayList<>();
         for (Travel travel : travels) {
-            // Филтриране на офертите за дадено пътуване, за да се намери тази, създадена от логнатия потребител
-            List<TravelOffer> offers = travel.getOffers().stream()
-                    .filter(offer -> offer.getUser().getUsername().equals(userDetails.getUsername()))
-                    .toList();
+            if (travel.getStartTime().isAfter(LocalDateTime.now())){
+                List<TravelOffer> offers = travel.getOffers().stream()
+                        .filter(offer -> offer.getUser().getUsername().equals(userDetails.getUsername()))
+                        .toList();
 
             for (TravelOffer offer : offers) {
                 passengerOffers.add(new TravelDTOPassengers(
+                        offer.getId(),
                         travel.getId(),
                         travel.getStartLocation(),
                         travel.getEndLocation(),
@@ -130,6 +135,7 @@ public class TravelService {
                         offer.getNote()
                 ));
             }
+        }
         }
         return passengerOffers;
     }
@@ -140,12 +146,54 @@ public class TravelService {
 
     public List<TravelDTO> getTravelsByCreatorId(Long creatorId) {
         return travelRepository.findAll().stream()  // Fetch all travels
-                .filter(travel -> travel.getUser().getId().equals(creatorId))  // Filter by creatorId
+                .filter(travel -> travel.getUser().getId().equals(creatorId))
+                .filter(travel -> travel.getStartTime().isAfter(LocalDateTime.now()))
                 .map(TravelDTO::new)
                 .collect(Collectors.toList());
     }
 
     public boolean hasUserSubmittedOffer(Long travelId, Long userId) {
         return offerRepository.existsByTravelIdAndUserId(travelId, userId) || offerRepository.ifDriver(travelId, userId);
+    }
+
+    public ResponseEntity<String> deleteTravel(Long travelId, UserDetails userDetails) {
+        Travel travel = travelRepository.findById(travelId).orElse(null);
+        if (travel == null || !travel.getUser().getUsername().equals(userDetails.getUsername())) {
+            return new ResponseEntity<>("Travel not found or user unauthorized", HttpStatus.NOT_FOUND);
+        }
+
+        List<TravelOffer> acceptedOffers = travel.getOffers().stream()
+                .filter(offer -> offer.getStatus() == OfferStatus.ACCEPTED)
+                .toList();
+
+        // Изпращане на имейл до пътниците
+        for (TravelOffer offer : acceptedOffers) {
+            EmailRequest request = new EmailRequest(offer.getUser().getEmail(), Subject.TRAVEL_DELETED,
+                    String.format("The travel %s - %s (%s) has been deleted.",
+                            travel.getStartLocation(), travel.getEndLocation(), travel.getStartTime()));
+            this.emailService.sendEmail(request);
+        }
+        travelRepository.delete(travel);
+
+        return new ResponseEntity<>("Travel deleted successfully", HttpStatus.OK);
+    }
+    public ResponseEntity<String> deleteOffer(Long offerId, UserDetails userDetails) {
+        TravelOffer offer = offerRepository.findById(offerId).orElse(null);
+        if (offer == null || !offer.getUser().getUsername().equals(userDetails.getUsername())) {
+            return new ResponseEntity<>("Offer not found or user unauthorized", HttpStatus.NOT_FOUND);
+        }
+
+        // Изпращане на имейл до шофьора
+        EmailRequest request = new EmailRequest(offer.getTravel().getUser().getEmail(), Subject.OFFER_DELETED,
+                String.format("A passenger has deleted their offer for travel %s - %s (%s).",
+                        offer.getTravel().getStartLocation(), offer.getTravel().getEndLocation(), offer.getTravel().getStartTime()));
+        this.emailService.sendEmail(request);
+        Travel travel = offer.getTravel();
+        travel.setFreeSpaces(travel.getFreeSpaces() + 1);
+        travelRepository.save(travel);
+        // Изтриване на офертата
+        offerRepository.delete(offer);
+
+        return new ResponseEntity<>("Offer deleted successfully", HttpStatus.OK);
     }
 }

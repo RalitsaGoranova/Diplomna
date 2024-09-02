@@ -4,46 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f36d3fa-cb37-425e-9bea-c12417532d75" name="Changes" comment="rabotim">
-      <change afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/TravelDTOPassengers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/envi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/dto/offerPassenger.dto.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FE/src/dto/travelByMe.dto.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="2f36d3fa-cb37-425e-9bea-c12417532d75" name="Changes" comment="rabotim1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/TravelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/TravelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/TravelOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/TravelOffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/TravelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/TravelDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/repos/TravelOfferRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/repos/TravelOfferRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/enums/email/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/enums/email/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/TravelDTOPassengers.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/models/dtos/TravelDTOPassengers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/TravelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BE/src/main/java/com/example/demo/services/TravelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/fe/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/fe/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_common.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_common_http.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_common_http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_forms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_autocomplete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_autocomplete.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_autocomplete.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_form-field.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_form-field.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_input.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_input.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_input.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_snack-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_snack-bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_snack-bar.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_snack-bar.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_toolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_toolbar.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_material_toolbar.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser_animations.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser_animations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser_animations.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_platform-browser_animations.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/@angular_router.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/_metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-2572PXDU.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-2572PXDU.js.map" beforeDir="false" />
@@ -65,27 +34,14 @@
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-VWTQYRNW.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-WGUSVH24.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/chunk-WGUSVH24.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/rxjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/FE/.angular/cache/17.3.8/vite/deps/rxjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/FE/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/app.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/app/landing/landing.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/app/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/landing/landing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/landing/landing.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/registration/registration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/registration/registration.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/registration/registration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/registration/registration.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/search/search.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/search/search.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/my-profile/my-profile.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/app/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/search/search.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/search/search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/search/search.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/app/top-bar/top-bar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/dto/auth.dto.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/dto/auth.dto.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/dto/travel.dto.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/dto/travel.dto.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/guard/auth.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/guard/auth.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FE/src/dto/offerPassenger.dto.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/dto/offerPassenger.dto.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FE/src/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FE/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/FE/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,28 +83,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.DemoApplication.executor": "Run",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ralitsa/Diplomna",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\Ralitsa\\Diplomna\\FE\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ralitsa/Diplomna&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ralitsa\\Diplomna\\FE\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ralitsa\Diplomna\FE\src" />
@@ -202,7 +158,8 @@
       <workItem from="1721819237597" duration="28104000" />
       <workItem from="1723074199695" duration="2870000" />
       <workItem from="1723298450045" duration="85104000" />
-      <workItem from="1724235286011" duration="74372000" />
+      <workItem from="1724235286011" duration="92713000" />
+      <workItem from="1725226759243" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="neshto si">
       <option name="closed" value="true" />
@@ -220,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723078194048</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="rabotim1">
+      <option name="closed" value="true" />
+      <created>1724924871762</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724924871762</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,22 +205,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="neshto si" />
     <MESSAGE value="rabotim" />
-    <option name="LAST_COMMIT_MESSAGE" value="rabotim" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/BE/src/main/java/com/example/demo/controllers/TravelController.java</url>
-          <line>176</line>
-          <properties class="com.example.demo.controllers.TravelController" method="hasUserSubmittedOffer">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="rabotim1" />
+    <option name="LAST_COMMIT_MESSAGE" value="rabotim1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

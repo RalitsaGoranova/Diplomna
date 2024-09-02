@@ -1,4 +1,5 @@
 <app-top-bar></app-top-bar>
+<div class="all">
 <div class="landing-container">
     <div class="header-container">
         <h2>Available Travels</h2>
@@ -23,7 +24,7 @@
                     Description: {{ travel.description }}
                 </div>
                     <button
-                            *ngIf="!hasSubmittedOffer(travel.id)"
+                            *ngIf="!hasSubmittedOffer(travel.id) "
                             mat-raised-button
                             color="primary"
                             (click)="openDialog(travel.id!)">
@@ -37,4 +38,5 @@
     <ng-template #noTravels>
         <p>No travels available.</p>
     </ng-template>
+</div>
 </div>

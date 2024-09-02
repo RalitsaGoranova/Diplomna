@@ -18,6 +18,7 @@
                     <p><strong>Description:</strong> {{ travel.description }}</p>
                     <p><strong>Start Time:</strong> {{ travel.startTime | date:'short' }}</p>
                     <p><strong>Free Spaces:</strong> {{ travel.freeSpaces }}</p>
+                    <button mat-stroked-button (click)="deleteTravel(travel.id!)">Delete Travel</button>
                     <div *ngIf="travel.id && offersByTravelId && offersByTravelId[travel.id].length > 0"
                          class="inner-offers">
                         <h4>Offers:</h4>
@@ -40,15 +41,20 @@
 
         <div class="travels-passenger">
             <h3>Travels where I am a passenger</h3>
+            <div *ngIf="travelsAsPassenger.length > 0; else noPassengerTravels">
             <div *ngFor="let offer of travelsAsPassenger">
                 <p><strong>Start Location:</strong> {{ offer.startLocation }}</p>
                 <p><strong>End Location:</strong> {{ offer.endLocation }}</p>
                 <p><strong>Start Time:</strong> {{ offer.startTime | date:'short' }}</p>
                 <p><strong>Offer Note:</strong> {{ offer.note }}</p>
                 <p><strong>Status:</strong> {{ offer.status }}</p>
+                <div *ngIf="offer.status!='DENIED'">
+                <button mat-stroked-button (click)="deleteOffer(offer.id!)">Delete Offer</button>
+                </div>
                 <hr/>
             </div>
-            <ng-template #noPassengerTravels>
+            </div>
+                <ng-template #noPassengerTravels>
                 <p>No travels where you are a passenger.</p>
             </ng-template>
         </div>

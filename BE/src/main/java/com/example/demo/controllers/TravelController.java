@@ -183,4 +183,15 @@ public class TravelController {
         boolean hasSubmitted = travelService.hasUserSubmittedOffer(travelId, userId);
         return ResponseEntity.ok(hasSubmitted);
     }
+    @DeleteMapping("delete/{travelId}")
+    @Secured({})
+    public ResponseEntity<String> deleteTravel(@PathVariable Long travelId, @AuthenticationPrincipal UserDetails userDetails) {
+        return travelService.deleteTravel(travelId, userDetails);
+    }
+
+    @DeleteMapping("/offer/delete/{offerId}")
+    @Secured({})
+    public ResponseEntity<String> deleteOffer(@PathVariable Long offerId, @AuthenticationPrincipal UserDetails userDetails) {
+        return travelService.deleteOffer(offerId, userDetails);
+    }
 }

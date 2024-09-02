@@ -1,13 +1,18 @@
 .landing-container {
     background: linear-gradient(to right, #8e2de2, #4a00e0);
     display: flex;
+    padding-top: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* This ensures the container covers at least the full viewport height */
+    position: relative;
     text-align: center;
-    overflow: auto;
-    padding: 20px; /* Optional: Add some padding to make content look better */
+
+}
+.all{
+    height: 100vb;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+
 }
 .header-container {
     display: flex;

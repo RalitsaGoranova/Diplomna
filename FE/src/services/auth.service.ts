@@ -87,5 +87,11 @@ export class AuthService {
         return this.http.get<boolean>(`api/travel/${travelId}/offers/user`);
     }
 
+    deleteTravel(travelId: number): Observable<void> {
+        return this.http.delete<void>(`api/travel/delete/${travelId}`);
+    }
 
+    deleteOffer(offerId: number): Observable<void> {
+        return this.http.delete<void>(`api/travel/offer/delete/${offerId}`);
+    }
 }

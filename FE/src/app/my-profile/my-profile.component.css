@@ -4,10 +4,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    overflow: auto;
     position: relative;
     text-align: center;
     height: 100vb;
 }
+
 
 .profile-info {
     margin-bottom: 20px;
@@ -17,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 10px;
 }
 
 .travels-created,

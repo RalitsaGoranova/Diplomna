@@ -1,0 +1,90 @@
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* This ensures the container covers at least the full viewport height */
+    text-align: center;
+    overflow: auto;
+    padding: 20px;
+}
+
+.about-us-container {
+    display: flex;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-content {
+    flex: 3;
+    padding-right: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f0f4f7;
+    border-left: 3px solid #794caf;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #9743e5;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    color: #333;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #c2c2c2;
+}
